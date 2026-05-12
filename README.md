@@ -1,29 +1,31 @@
-# 📄 License & Certificate Tracker — Frontend
+# 📄 DocuVault — License & Certificate Tracker
 
-A frontend web application designed to help users securely manage, organize, and track licenses and certificates in one place. The system provides an easy-to-use interface for uploading documents, monitoring expiry dates, and managing important records efficiently.
+DocuVault is a frontend web application designed to securely manage, organize, and track licenses and certificates in one place. It helps users upload documents, monitor expiry dates, and manage important records through a clean and responsive interface.
 
 ---
 
 ## 🚀 Features
 
-- 🔐 User Authentication UI
-- 📁 Upload & Manage Certificates
-- ⏰ Expiry Tracking & Reminders
-- 📊 Dashboard Overview
-- 🗂️ Document Categorization
-- 🔍 Search & Filter Functionality
-- 📱 Responsive User Interface
+- 🔐 User Authentication Pages
+- 📁 Upload & Manage Documents
+- ⏰ Expiry Tracking
+- 📊 Dashboard Interface
+- 🗂️ Category Management
+- 🔔 Notification Section
+- 👤 User Profile Management
+- ⚙️ Settings Panel
+- 📱 Responsive Design
 
 ---
 
 ## 🛠️ Tech Stack
 
 ### Frontend
-- HTML
-- CSS
+- HTML5
+- CSS3
 - JavaScript
 
-### Tools & Platform
+### Tools
 - VS Code
 - Git & GitHub
 
@@ -32,10 +34,20 @@ A frontend web application designed to help users securely manage, organize, and
 ## 📂 Project Structure
 
 ```bash
-project-folder/
+frontend/
 │
-├── index.html
-├── css/
-├── js/
 ├── assets/
-└── pages/
+│   ├── css/
+│   ├── js/
+│   └── images/
+│
+├── pages/
+│   ├── dashboard.html
+│   ├── documents.html
+│   ├── upload.html
+│   ├── profile.html
+│   ├── settings.html
+│   ├── login.html
+│   └── register.html
+│
+└── index.html

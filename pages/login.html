@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>DocuVault | Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body class="login-body">
+  <div class="login-card" id="authCard">
+
+    <!-- LEFT SIDE -->
+    <div class="login-left" id="leftPanel">
+      <div class="left-content">
+        <h1>WELCOME</h1>
+        <h2>DocuVault</h2>
+        <p id="leftText">
+          Securely manage, track, and organize your important licenses and certificates in one place.
+        </p>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="login-right">
+      <div class="form-wrapper">
+
+        <!-- LOGIN FORM -->
+        <div class="auth-form" id="loginFormBox">
+          <h3>Sign in</h3>
+
+          <!-- SUCCESS MESSAGE -->
+          <p class="success-text" id="registerSuccess"></p>
+
+          <form id="loginForm">
+            <div class="form-group">
+              <label>Username</label>
+              <input
+                type="text"
+                id="loginUsername"
+                placeholder="Enter your username"
+              />
+            </div>
+
+            <div class="form-group password-group">
+              <label>Password</label>
+              <div class="password-wrapper">
+                <input
+                  type="password"
+                  id="loginPassword"
+                  placeholder="Enter your password"
+                  autocomplete="current-password"
+                />
+                <span class="toggle-password" data-target="loginPassword">Show</span>
+              </div>
+            </div>
+
+            <div class="forgot-row">
+              <a href="#" id="goForgot">Forgot password?</a>
+            </div>
+
+            <p class="error-text" id="loginError"></p>
+
+            <button type="submit" class="login-btn">Sign in</button>
+          </form>
+
+          <p class="register-text">
+            New user?
+            <a href="register.html">Create account</a>
+          </p>
+        </div>
+
+        <!-- FORGOT PASSWORD FORM -->
+        <div class="auth-form hidden" id="forgotFormBox">
+          <h3>Forgot Password</h3>
+
+          <form id="forgotForm">
+            <div class="form-group">
+              <label>Email</label>
+              <input 
+                type="email" 
+                id="forgotEmail" 
+                placeholder="Enter your registered email"
+                autocomplete="email"
+              />
+            </div>
+
+            <p class="error-text" id="forgotError"></p>
+
+            <button type="submit" class="login-btn">Reset Password</button>
+          </form>
+
+          <p class="register-text">
+            Remembered?
+            <a href="#" id="goLoginFromForgot">Back to login</a>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/auth.js"></script>
+  <script src="../assets/js/api.js"></script>
+  <script src="../assets/js/login.js"></script>
+</body>
+</html>

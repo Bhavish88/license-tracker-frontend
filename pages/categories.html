@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Categories | DocuVault</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="user-dashboard">
+
+  <!-- SIDEBAR (UNCHANGED) -->
+  <aside class="sidebar">
+    <h2 class="logo">DocuVault</h2>
+
+    <nav class="nav">
+      <a href="dashboard.html" class="nav-link">
+        <i class="fas fa-th-large"></i><span>Dashboard</span>
+      </a>
+
+      <a href="upload.html" class="nav-link">
+        <i class="fas fa-upload"></i><span>Upload Document</span>
+      </a>
+
+      <a href="documents.html" class="nav-link">
+        <i class="fas fa-file-alt"></i><span>My Documents</span>
+      </a>
+
+      <a href="expiry.html" class="nav-link">
+        <i class="fas fa-calendar-check"></i><span>Expiry Tracker</span>
+      </a>
+
+      <a href="categories.html" class="nav-link active">
+        <i class="fas fa-folder"></i><span>Categories</span>
+      </a>
+
+      <a href="profile.html" class="nav-link">
+        <i class="fas fa-user"></i><span>Profile</span>
+      </a>
+
+      <a href="settings.html" class="nav-link">
+        <i class="fas fa-cog"></i><span>Settings</span>
+      </a>
+
+      <div class="sidebar-divider"></div>
+
+      <a href="login.html" class="nav-link logout" id="logoutBtn">
+        <i class="fas fa-sign-out-alt"></i><span>Logout</span>
+      </a>
+    </nav>
+  </aside>
+
+  <!-- PAGE-SPECIFIC MAIN (FIXED) -->
+  <main class="categories-main">
+
+    <!-- PAGE-SCOPED HEADER -->
+    <div class="categories-header">
+      <div class="categories-header-text">
+        <h1>Categories</h1>
+        <p>Organize your documents into categories for easy access and better management.</p>
+      </div>
+
+      <button class="primary-btn" id="addCategoryBtn">+ Add Category</button>
+    </div>
+
+    <!-- CATEGORY GRID (JS ID UNCHANGED) -->
+    <div class="category-grid" id="categoryGrid"></div>
+
+  </main>
+
+  <!-- MODAL (UNCHANGED) -->
+  <div class="modal hidden" id="categoryModal">
+    <div class="modal-card">
+      <h3 id="modalTitle">Add Category</h3>
+
+      <input type="text" id="categoryNameInput" placeholder="Category name" />
+
+      <div class="modal-actions">
+        <button class="btn-secondary" id="cancelModal">Cancel</button>
+        <button class="primary-btn" id="saveCategory">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/auth.js"></script>
+  <script src="../assets/js/api.js"></script>
+  <script src="../assets/js/categories.js"></script>
+
+</body>
+</html>

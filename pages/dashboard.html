@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>User Dashboard | DocuVault</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <!-- Icons from a CDN for better visuals -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="dashboard-container user-dashboard">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <h2 class="logo">DocuVault</h2>
+
+        <nav class="nav">
+          <a href="#" class="nav-link active" data-page="dashboard.html">
+            <i class="fas fa-th-large"></i>
+            <span>Dashboard</span>
+          </a>
+          <a href="#" class="nav-link" data-page="upload.html">
+            <i class="fas fa-upload"></i>
+            <span>Upload Document</span>
+          </a>
+          <a href="#" class="nav-link" data-page="documents.html">
+            <i class="fas fa-file-alt"></i>
+            <span>My Documents</span>
+          </a>
+          <a href="#" class="nav-link" data-page="expiry.html">
+            <i class="fas fa-calendar-check"></i>
+            <span>Expiry Tracker</span>
+          </a>
+          <a href="#" class="nav-link" data-page="categories.html">
+            <i class="fas fa-folder"></i>
+            <span>Categories</span>
+          </a>
+          <a href="#" class="nav-link" data-page="profile.html">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+          </a>
+          <a href="#" class="nav-link" data-page="settings.html">
+            <i class="fas fa-cog"></i>
+            <span>Settings</span>
+          </a>
+
+          <div class="sidebar-divider"></div>
+
+          <a href="#" class="nav-link logout" id="logoutBtn">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Logout</span>
+          </a>
+        </nav>
+      </aside>
+
+      <!-- MAIN -->
+      <main class="main">
+        <!-- HEADER -->
+        <header class="topbar">
+          <div>
+            <h1>Dashboard</h1>
+            <p>Manage and track your licenses and certificates</p>
+          </div>
+          <a href="profile.html" class="user-avatar">
+            <i class="fas fa-user"></i>
+          </a>
+        </header>
+
+        <!-- STATS -->
+        <section class="stats">
+          <div class="stat-card">
+            <div class="stat-icon blue">
+              <i class="fas fa-file-alt"></i>
+            </div>
+            <div class="stat-content">
+              <h3 id="totalDocuments">0</h3>
+              <p>Total Documents</p>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon green">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="stat-content">
+              <h3 id="activeLicenses">0</h3>
+              <p>Active Licenses</p>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon orange">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="stat-content">
+              <h3 id="expiringSoon">0</h3>
+              <p>Expiring Soon</p>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon red">
+              <i class="fas fa-times-circle"></i>
+            </div>
+            <div class="stat-content">
+              <h3 id="expiredCount">0</h3>
+              <p>Expired Documents</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- CONTENT SECTION -->
+        <section class="content-grid">
+          <!-- RECENT UPLOADS -->
+          <div class="content-card">
+            <h2 class="card-title">Recent Uploads</h2>
+
+            <!-- JS will render here -->
+            <div class="document-list" id="recentUploads">
+              <!-- dynamic -->
+            </div>
+          </div>
+
+          <!-- EXPIRING SOON -->
+          <div class="content-card expiring-card">
+            <h2 class="card-title">
+              <i class="fas fa-exclamation-circle"></i> Expiring Soon
+            </h2>
+
+            <!-- JS will render here -->
+            <div class="expiring-list" id="expiringList">
+              <!-- dynamic -->
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="../assets/js/auth.js"></script>
+    <script src="../assets/js/api.js"></script>
+    <script src="../assets/js/dashboard.js"></script>
+  </body>
+</html>

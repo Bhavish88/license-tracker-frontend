@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Expiry Tracker | DocuVault</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+
+  <body class="user-dashboard">
+    <!-- SIDEBAR (UNCHANGED) -->
+    <aside class="sidebar">
+      <h2 class="logo">DocuVault</h2>
+
+      <nav class="nav">
+        <a href="dashboard.html" class="nav-link">
+          <i class="fas fa-th-large"></i><span>Dashboard</span>
+        </a>
+
+        <a href="upload.html" class="nav-link">
+          <i class="fas fa-upload"></i><span>Upload Document</span>
+        </a>
+
+        <a href="documents.html" class="nav-link">
+          <i class="fas fa-file-alt"></i><span>My Documents</span>
+        </a>
+
+        <a href="expiry.html" class="nav-link active">
+          <i class="fas fa-calendar-check"></i><span>Expiry Tracker</span>
+        </a>
+
+        <a href="categories.html" class="nav-link">
+          <i class="fas fa-folder"></i><span>Categories</span>
+        </a>
+
+        <a href="profile.html" class="nav-link">
+          <i class="fas fa-user"></i><span>Profile</span>
+        </a>
+
+        <a href="settings.html" class="nav-link">
+          <i class="fas fa-cog"></i><span>Settings</span>
+        </a>
+
+        <div class="sidebar-divider"></div>
+
+        <a href="login.html" class="nav-link logout" id="logoutBtn">
+          <i class="fas fa-sign-out-alt"></i><span>Logout</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- MAIN CONTENT (FIXED – PAGE ISOLATED) -->
+    <main class="expiry-main">
+      <!-- HEADER (LIKE UPLOAD & DOCUMENTS) -->
+      <header class="expiry-header">
+        <h1>Expiry Tracker</h1>
+        <p class="subtitle">
+          Stay on top of your document renewals and never miss a critical
+          deadline
+        </p>
+      </header>
+
+      <!-- SUMMARY CARDS -->
+      <div class="summary-grid">
+        <div class="summary-card warning">
+          <h4>Expiring in 7 Days</h4>
+          <h2 id="count30">0</h2>
+          <p>Requires immediate attention</p>
+        </div>
+
+        <div class="summary-card info">
+          <h4>Expiring in 30 Days</h4>
+          <h2 id="count60">0</h2>
+          <p>Plan for renewal</p>
+        </div>
+
+        <div class="summary-card danger">
+          <h4>Expired Documents</h4>
+          <h2 id="countExpired">0</h2>
+          <p>Urgent action required</p>
+        </div>
+      </div>
+
+      <!-- TABLE -->
+      <div class="table-card">
+        <h3>All Documents</h3>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Document Name</th>
+              <th>Category</th>
+              <th>Expiry Date</th>
+              <th>Status</th>
+              <th class="right">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="expiryTable"></tbody>
+        </table>
+      </div>
+      <!-- DETAILS MODAL -->
+      <div id="detailsModal" class="details-modal hidden">
+        <div class="details-card">
+          <h3>Document Details</h3>
+
+          <div class="details-content" id="detailsContent"></div>
+
+          <div class="details-actions">
+            <button id="closeDetailsBtn">Close</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="../assets/js/auth.js"></script>
+    <script src="../assets/js/api.js"></script>
+    <script src="../assets/js/expiry.js"></script>
+  </body>
+</html>

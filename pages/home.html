@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="DocuVault - Manage your licenses and certificates in one secure place with automatic expiry tracking and reminders" />
+    <title>DocuVault - Secure Document Management</title>
+    
+    <!-- Preload fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <!-- NAVIGATION -->
+    <header class="navbar" id="navbar">
+      <div class="nav-container">
+        <!-- Logo -->
+        <div class="logo">
+          <span class="logo-text">DocuVault</span>
+        </div>
+
+        <!-- Desktop Menu -->
+        <nav class="nav-links" id="mobileNav">
+          <a href="#home" id="nav-home" class="active">Home</a>
+          <a href="#features" id="nav-features">Features</a>
+          <a href="#how" id="nav-how">How It Works</a>
+          <a href="login.html" id="nav-login">Login</a>
+          <a href="register.html" id="nav-register" class="btn-register">Register</a>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <div class="menu-toggle" id="menuToggle">☰</div>
+      </div>
+      
+      <!-- Mobile Navigation Overlay -->
+      <div class="nav-overlay" id="navOverlay"></div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+      <div class="hero-container">
+        <!-- Hero Content -->
+        <div class="hero-text">
+          <h1>Manage Your Licenses & Certificates in One Secure Place</h1>
+          <p>
+            Upload, organize, and track expiry dates of licenses and
+            certificates with automatic reminders. Never miss a renewal deadline again.
+          </p>
+
+          <div class="hero-actions">
+            <button id="hero-get-started" class="primary-btn">
+              Get Started Free
+            </button>
+            <button id="hero-login" class="secondary-btn">Login to Account</button>
+          </div>
+        </div>
+
+        <!-- Hero Dashboard Card -->
+        <div class="hero-card">
+          <!-- STATS -->
+          <div class="stats">
+            <div class="stat-card blue">
+              <div class="stat-icon">📊</div>
+              <span class="stat-number">24</span>
+              <span class="stat-label">Documents</span>
+            </div>
+
+            <div class="stat-card green">
+              <div class="stat-icon">✅</div>
+              <span class="stat-number">18</span>
+              <span class="stat-label">Active</span>
+            </div>
+
+            <div class="stat-card orange">
+              <div class="stat-icon">🔔</div>
+              <span class="stat-number">3</span>
+              <span class="stat-label">Expiring</span>
+            </div>
+          </div>
+
+          <!-- DOCUMENT LIST -->
+          <div class="doc-list">
+            <div class="doc-item">
+              <div class="doc-left">
+                <div class="doc-icon blue">📄</div>
+                <div>
+                  <p class="doc-title">Driving License</p>
+                  <p class="doc-expiry">Expires: Dec 2026</p>
+                </div>
+              </div>
+              <span class="status active">Active</span>
+            </div>
+
+            <div class="doc-item warning">
+              <div class="doc-left">
+                <div class="doc-icon orange">🔔</div>
+                <div>
+                  <p class="doc-title">IT Certification</p>
+                  <p class="doc-expiry">Expires: Jan 2026</p>
+                </div>
+              </div>
+              <span class="status expiring">Expiring</span>
+            </div>
+
+            <div class="doc-item">
+              <div class="doc-left">
+                <div class="doc-icon gray">📁</div>
+                <div>
+                  <p class="doc-title">Professional License</p>
+                  <p class="doc-expiry">Expires: Mar 2027</p>
+                </div>
+              </div>
+              <span class="status active">Active</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section id="features" class="features">
+      <div class="features-container">
+        <h2 class="features-title">Powerful Features</h2>
+        <p class="features-subtitle">
+          Everything you need to manage your licenses and certificates
+          efficiently and securely
+        </p>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🛡️</div>
+            <h3>Bank-Grade Security</h3>
+            <p>
+              Military-grade encryption and secure access controls protect your sensitive documents 24/7.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🔔</div>
+            <h3>Smart Reminders</h3>
+            <p>
+              Never miss renewal deadlines with intelligent alerts and customizable notifications.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🗂️</div>
+            <h3> Organization</h3>
+            <p>
+              Categorization automatically organizes documents for instant retrieval.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🌐</div>
+            <h3>Access Anywhere</h3>
+            <p>
+              Cloud-based platform lets you manage documents from any device, anywhere, anytime.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS SECTION -->
+    <section id="how" class="how-it-works">
+      <div class="how-container">
+        <h2 class="how-title">How It Works</h2>
+        <p class="how-subtitle">Get started in three simple steps</p>
+
+        <div class="how-steps">
+          <!-- Step 1 -->
+          <div class="how-step">
+            <div class="step-circle">
+              <span class="step-number">1</span>
+              <div class="step-icon">👤</div>
+            </div>
+            <h3>Create Account</h3>
+            <p>Sign up securely in under 60 seconds with just your email address.</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="how-step">
+            <div class="step-circle">
+              <span class="step-number">2</span>
+              <div class="step-icon">⬆️</div>
+            </div>
+            <h3>Upload Documents</h3>
+            <p>
+              Drag and drop your licenses with expiry dates and categories in seconds.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="how-step">
+            <div class="step-circle">
+              <span class="step-number">3</span>
+              <div class="step-icon">📅</div>
+            </div>
+            <h3>Stay Updated</h3>
+            <p>
+              Receive timely alerts before expiry and track all renewals in one dashboard.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>© 2025 DocuVault. All rights reserved. | Built with security in mind.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/home.js"></script>
+    <script src="../assets/js/auth.js"></script>
+    <script src="../assets/js/api.js"></script>
+
+     </body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Admin Notifications | DocuVault</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Global styles -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Auth + API -->
+    <script src="../assets/js/auth.js" defer></script>
+    <script src="../assets/js/api.js" defer></script>
+
+    <!-- Page JS -->
+    <script src="../assets/js/admin-notifications.js" defer></script>
+  </head>
+
+  <body class="dashboard-body admin-dashboard">
+
+    <!-- SIDEBAR (UNCHANGED) -->
+    <aside class="sidebar">
+      <h2 class="logo">DocuVault</h2>
+
+      <nav class="nav">
+        <a href="admin-dashboard.html" class="nav-link">
+          <i class="fas fa-chart-line"></i>
+          <span>Dashboard</span>
+        </a>
+
+        <a href="admin-users.html" class="nav-link">
+          <i class="fas fa-users"></i>
+          <span>Users</span>
+        </a>
+
+        <a href="admin-notifications.html" class="nav-link active">
+          <i class="fas fa-bell"></i>
+          <span>Notifications</span>
+        </a>
+
+        <a href="admin-settings.html" class="nav-link">
+          <i class="fas fa-cog"></i>
+          <span>Settings</span>
+        </a>
+
+        <div class="sidebar-divider"></div>
+
+        <a href="login.html" class="nav-link logout" id="logoutBtn">
+          <i class="fas fa-sign-out-alt"></i>
+          <span>Logout</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- PAGE-SPECIFIC MAIN -->
+    <main class="admin-notifications-main">
+
+      <!-- PAGE HEADER -->
+      <div class="admin-notifications-header">
+        <h1>Notifications</h1>
+        <p>System-wide notification audit log (read-only)</p>
+      </div>
+
+      <!-- FILTERS -->
+      <div class="filters">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search by username or message"
+        />
+
+        <select id="typeFilter">
+          <option value="">All Types</option>
+          <option value="expiry">Expiry</option>
+          <option value="expired">Expired</option>
+          <option value="reminder">Reminder</option>
+          <option value="system">System</option>
+        </select>
+
+        <select id="statusFilter">
+          <option value="">All Status</option>
+          <option value="read">Read</option>
+          <option value="unread">Unread</option>
+        </select>
+      </div>
+
+      <!-- TABLE -->
+      <div class="table-wrapper">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>User</th>
+              <th>Notification</th>
+              <th>Document</th>
+              <th>Type</th>
+              <th>Status</th>
+              <th>Date &amp; Time</th>
+            </tr>
+          </thead>
+          <tbody id="notificationTableBody">
+            <!-- JS injects rows -->
+          </tbody>
+        </table>
+      </div>
+
+    </main>
+
+  </body>
+</html>

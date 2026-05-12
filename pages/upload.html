@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Upload Document | DocuVault</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+</head>
+
+<body class="user-dashboard">
+  <div class="upload-layout">
+
+    <!-- SIDEBAR (UNTOUCHED) -->
+    <aside class="sidebar">
+      <h2 class="logo">DocuVault</h2>
+
+      <nav class="nav">
+        <a href="dashboard.html" class="nav-link">
+          <i class="fas fa-th-large"></i><span>Dashboard</span>
+        </a>
+
+        <a href="upload.html" class="nav-link active">
+          <i class="fas fa-upload"></i><span>Upload Document</span>
+        </a>
+
+        <a href="documents.html" class="nav-link">
+          <i class="fas fa-file-alt"></i><span>My Documents</span>
+        </a>
+
+        <a href="expiry.html" class="nav-link">
+          <i class="fas fa-calendar-check"></i><span>Expiry Tracker</span>
+        </a>
+
+        <a href="categories.html" class="nav-link">
+          <i class="fas fa-folder"></i><span>Categories</span>
+        </a>
+
+        <a href="profile.html" class="nav-link">
+          <i class="fas fa-user"></i><span>Profile</span>
+        </a>
+
+        <a href="settings.html" class="nav-link">
+          <i class="fas fa-cog"></i><span>Settings</span>
+        </a>
+
+        <div class="sidebar-divider"></div>
+
+        <a href="login.html" class="nav-link logout" id="logoutBtn">
+          <i class="fas fa-sign-out-alt"></i><span>Logout</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- MAIN UPLOAD CONTENT -->
+    <main class="upload-main">
+      <header class="upload-header">
+        <h1>Upload Document</h1>
+        <p>Securely upload your licenses and certificates</p>
+      </header>
+
+      <div class="upload-steps">
+        <div class="step active">1<span>Choose Type</span></div>
+        <div class="step">2<span>Details</span></div>
+        <div class="step">3<span>Upload</span></div>
+        <div class="step">4<span>Submit</span></div>
+      </div>
+
+      <!-- KEEP OLD MESSAGE CONTAINER (NO LONGER USED) -->
+      <div id="uploadMessage" class="alert hidden"></div>
+
+      <form id="uploadForm" class="upload-form">
+
+        <!-- STEP 1 -->
+        <section class="upload-card">
+          <h3>Step 1: Choose Document Type</h3>
+          <p class="hint">Select whether you are uploading a license or certificate.</p>
+
+          <label>Document Type</label>
+          <select id="docType">
+            <option value="certificate">Certificate</option>
+            <option value="license">License</option>
+          </select>
+        </section>
+
+        <!-- STEP 2 -->
+        <section class="upload-card">
+          <h3>Step 2: Enter Document Details</h3>
+
+          <div id="licenseFields">
+            <label>License Name</label>
+            <input type="text" id="licenseName" placeholder="e.g. Driving License" />
+
+            <label>License Number</label>
+            <input type="text" id="licenseNumber" placeholder="e.g. DL-XXXXXXX" />
+
+            <label>Issued By</label>
+            <input type="text" id="issuedBy" placeholder="e.g. RTO Mumbai" />
+
+            <div class="row">
+              <div>
+                <label>Issue Date</label>
+                <input type="date" id="licenseIssueDate" />
+              </div>
+              <div>
+                <label>Expiry Date</label>
+                <input type="date" id="licenseExpiryDate" />
+              </div>
+            </div>
+          </div>
+
+          <div id="certificateFields">
+            <label>Certificate Title</label>
+            <input type="text" id="certificateTitle" placeholder="e.g. AWS Cloud Practitioner" />
+
+            <label>Category</label>
+            <select id="certificateCategory"></select>
+
+            <div class="row">
+              <div>
+                <label>Issued Date</label>
+                <input type="date" id="certificateIssuedDate" />
+              </div>
+              <div>
+                <label>Expiry Date</label>
+                <input type="date" id="certificateExpiryDate" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- STEP 3 -->
+        <section class="upload-card">
+          <h3>Step 3: Upload File</h3>
+
+          <div class="upload-box">
+            <input type="file" id="file" hidden />
+            <label for="file" class="upload-trigger">
+              Click to upload or drag & drop
+            </label>
+
+            <div id="filePreview" class="file-preview hidden">
+              <i class="fas fa-check-circle"></i>
+
+              <div class="file-info">
+                <span class="file-name"></span>
+                <span class="file-size"></span>
+              </div>
+
+              <span class="file-status">Selected</span>
+
+              <button type="button" id="replaceFileBtn" class="replace-file-btn">
+                Replace
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ACTION BAR (MESSAGE MOVED HERE) -->
+        <div class="upload-actions">
+          <div id="uploadActionMessage" class="action-message hidden"></div>
+
+          <button type="reset" class="btn-secondary">Cancel</button>
+          <button type="submit" id="uploadBtn" class="btn-primary">
+            Upload Document
+          </button>
+        </div>
+      </form>
+    </main>
+
+  </div>
+
+  <script src="../assets/js/auth.js"></script>
+  <script src="../assets/js/upload.js"></script>
+</body>
+</html>

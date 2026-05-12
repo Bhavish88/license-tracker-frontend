@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Settings | DocuVault</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+
+  <body class="user-dashboard">
+
+  <!-- SIDEBAR (UNCHANGED) -->
+  <aside class="sidebar">
+    <h2 class="logo">DocuVault</h2>
+
+    <nav class="nav">
+      <a href="dashboard.html" class="nav-link">
+        <i class="fas fa-th-large"></i><span>Dashboard</span>
+      </a>
+
+      <a href="upload.html" class="nav-link">
+        <i class="fas fa-upload"></i><span>Upload Document</span>
+      </a>
+
+      <a href="documents.html" class="nav-link">
+        <i class="fas fa-file-alt"></i><span>My Documents</span>
+      </a>
+
+      <a href="expiry.html" class="nav-link">
+        <i class="fas fa-calendar-check"></i><span>Expiry Tracker</span>
+      </a>
+
+      <a href="categories.html" class="nav-link">
+        <i class="fas fa-folder"></i><span>Categories</span>
+      </a>
+
+      <a href="profile.html" class="nav-link">
+        <i class="fas fa-user"></i><span>Profile</span>
+      </a>
+
+      <a href="settings.html" class="nav-link active">
+        <i class="fas fa-cog"></i><span>Settings</span>
+      </a>
+
+      <div class="sidebar-divider"></div>
+
+      <a href="login.html" class="nav-link logout" id="logoutBtn">
+        <i class="fas fa-sign-out-alt"></i><span>Logout</span>
+      </a>
+    </nav>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="settings-main">
+
+    <div class="settings-header-wrapper">
+      <h1>Settings</h1>
+      <p>Manage notifications and reminder preferences.</p>
+    </div>
+
+    <section class="settings-container">
+
+      <!-- EMAIL NOTIFICATION -->
+      <div class="settings-card">
+        <h3>Notification Preferences</h3>
+
+        <label class="settings-option">
+          <input type="checkbox" id="notifyEmail" />
+          <span>Notify via Email</span>
+        </label>
+      </div>
+
+      <!-- EXPIRY REMINDER -->
+      <div class="settings-card">
+        <h3>Expiry Reminder</h3>
+
+        <label class="settings-option">
+          <span>Notify me before (days)</span>
+          <select id="defaultNotifyDays">
+            <option value="7">7 days</option>
+            <option value="15">15 days</option>
+            <option value="30">30 days</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="settings-actions">
+        <button id="saveSettingsBtn" class="btn-primary">
+          Save Settings
+        </button>
+      </div>
+
+      <div id="settingsMessage" class="settings-message"></div>
+    </section>
+
+  </main>
+
+  <script src="../assets/js/api.js"></script>
+  <script src="../assets/js/auth.js"></script>
+  <script src="../assets/js/settings.js"></script>
+
+  </body>
+</html>
